@@ -8,8 +8,12 @@ function TaskInput({ addTask }) {
   };
   return (
     <div>
-      <input type="text" />
-      <button>Add Task</button>
+      <input
+        type="text"
+        onChange={(e) => setNewTask(e.target.value)}
+        value={newTask}
+      />
+      <button onClick={handleAddTask}>Add Task</button>
     </div>
   );
 }
