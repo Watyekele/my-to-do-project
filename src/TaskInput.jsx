@@ -9,11 +9,14 @@ function TaskInput({ addTask }) {
   return (
     <div>
       <input
+        className="border border-full m-2"
         type="text"
         onChange={(e) => setNewTask(e.target.value)}
         value={newTask}
       />
-      <button onClick={handleAddTask}>Add Task</button>
+      <button onClick={handleAddTask} className="bg-black text-white m-2">
+        Add Task
+      </button>
     </div>
   );
 }

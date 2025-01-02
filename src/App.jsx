@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import TaskInput from "./TaskInput";
 import TaskList from "./TaskList";
 
@@ -15,10 +14,12 @@ function App() {
     setTasks(tasks.filter((_, index) => index !== indexToDelete));
 
   return (
-    <div>
-      <h1>To-Do List</h1>
-      <TaskInput addTask={addTask} />
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
+    <div className="flex justify-center ">
+      <div className="flex flex-col justify-center">
+        <h1 className=" text-3xl ">To-Do List</h1>
+        <TaskInput addTask={addTask} />
+        <TaskList tasks={tasks} deleteTask={deleteTask} />
+      </div>
     </div>
   );
 }
