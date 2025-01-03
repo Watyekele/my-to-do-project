@@ -2,13 +2,16 @@ import React from "react";
 
 function TaskList({ tasks, deleteTask }) {
   return (
-    <ul>
+    <ul className="space-y-2">
       {tasks.map((task, index) => (
-        <li key={index} className="text-white mr-2 ">
-          {task}
+        <li
+          key={index}
+          className="text-white flex justify-between items-center "
+        >
+          <span className="truncate w-3/4">{task}</span>
           <button
             onClick={() => deleteTask(index)}
-            className="text-white bg-black p-2"
+            className="text-white bg-black p-2 ml-6"
           >
             delete
           </button>
