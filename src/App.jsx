@@ -14,9 +14,9 @@ function App() {
     setTasks(tasks.filter((_, index) => index !== indexToDelete));
 
   return (
-    <div className="flex justify-center ">
-      <div className="flex flex-col justify-center">
-        <h1 className=" text-3xl ">To-Do List</h1>
+    <div className="min-h-screen w-full bg-gray-900 flex items-center justify-center">
+      <div className="flex flex-col items-center space-y-4">
+        <h1 className=" text-3xl text-white ">To-Do List</h1>
         <TaskInput addTask={addTask} />
         <TaskList tasks={tasks} deleteTask={deleteTask} />
       </div>
